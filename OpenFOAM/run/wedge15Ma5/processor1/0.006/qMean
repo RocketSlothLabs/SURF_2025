@@ -1,0 +1,86 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       volScalarField;
+    location    "0.006";
+    object      qMean;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 0 -3 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    flow
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    obstacle
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+30
+(
+1370.827571
+1318.87314
+1257.510392
+1175.897
+1119.661621
+1125.82165
+1074.027053
+1105.583383
+1028.683758
+969.4214353
+943.8227805
+992.0767279
+920.2515449
+920.1503865
+920.1810111
+868.4467998
+860.8960728
+809.4521638
+779.6695489
+791.7430254
+771.9497038
+729.2942041
+772.8636565
+808.4499394
+717.5363918
+697.8142332
+716.6496033
+687.8822146
+650.1625705
+678.6268663
+)
+;
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+    procBoundary1to0
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary1to3
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

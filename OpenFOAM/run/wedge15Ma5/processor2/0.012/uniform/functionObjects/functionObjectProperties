@@ -1,0 +1,85 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "0.012/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    forces1
+    {
+        vector
+        {
+            pressureForce   ( 0.00189829527 -0.007084534397 -3.153837281e-20 );
+            viscousForce    ( 0.004168676016 0.001116993372 -0.0002226469044 );
+            internalForce   ( 0 0 0 );
+            pressureMoment  ( -4.371794673e-22 1.631575984e-21 -0.0009206516514 );
+            viscousMoment   ( 1.383224561e-05 -5.162264338e-05 -8.150011406e-14 );
+            internalMoment  ( 0 0 0 );
+        }
+    }
+}
+
+fieldAverage1
+{
+    rhoN
+    {
+        totalIter       6000;
+        totalTime       0.01200000000000094;
+    }
+    rhoM
+    {
+        totalIter       6000;
+        totalTime       0.01200000000000094;
+    }
+    dsmcRhoN
+    {
+        totalIter       6000;
+        totalTime       0.01200000000000094;
+    }
+    momentum
+    {
+        totalIter       6000;
+        totalTime       0.01200000000000094;
+    }
+    linearKE
+    {
+        totalIter       6000;
+        totalTime       0.01200000000000094;
+    }
+    internalE
+    {
+        totalIter       6000;
+        totalTime       0.01200000000000094;
+    }
+    iDof
+    {
+        totalIter       6000;
+        totalTime       0.01200000000000094;
+    }
+    q
+    {
+        totalIter       6000;
+        totalTime       0.01200000000000094;
+    }
+    fD
+    {
+        totalIter       6000;
+        totalTime       0.01200000000000094;
+    }
+}
+
+
+// ************************************************************************* //

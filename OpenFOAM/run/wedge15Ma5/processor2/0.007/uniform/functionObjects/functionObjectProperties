@@ -1,0 +1,85 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "0.007/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    forces1
+    {
+        vector
+        {
+            pressureForce   ( 0.001971877056 -0.007359145361 -2.769019691e-20 );
+            viscousForce    ( 0.003571793441 0.000957059168 0.0001762816781 );
+            internalForce   ( 0 0 0 );
+            pressureMoment  ( -7.579571123e-22 2.828734453e-21 -0.0009821769530000001 );
+            viscousMoment   ( 7.596899562e-06 -2.835201514e-05 2.176887335e-14 );
+            internalMoment  ( 0 0 0 );
+        }
+    }
+}
+
+fieldAverage1
+{
+    rhoN
+    {
+        totalIter       3500;
+        totalTime       0.00700000000000028;
+    }
+    rhoM
+    {
+        totalIter       3500;
+        totalTime       0.00700000000000028;
+    }
+    dsmcRhoN
+    {
+        totalIter       3500;
+        totalTime       0.00700000000000028;
+    }
+    momentum
+    {
+        totalIter       3500;
+        totalTime       0.00700000000000028;
+    }
+    linearKE
+    {
+        totalIter       3500;
+        totalTime       0.00700000000000028;
+    }
+    internalE
+    {
+        totalIter       3500;
+        totalTime       0.00700000000000028;
+    }
+    iDof
+    {
+        totalIter       3500;
+        totalTime       0.00700000000000028;
+    }
+    q
+    {
+        totalIter       3500;
+        totalTime       0.00700000000000028;
+    }
+    fD
+    {
+        totalIter       3500;
+        totalTime       0.00700000000000028;
+    }
+}
+
+
+// ************************************************************************* //

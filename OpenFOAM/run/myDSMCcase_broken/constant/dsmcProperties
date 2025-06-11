@@ -1,0 +1,104 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      dsmcProperties;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+BinaryCollisionModel     LarsenBorgnakkeVariableHardSphere;
+
+LarsenBorgnakkeVariableHardSphereCoeffs
+{
+    diameter                  4.17e-10;    // [m]
+    collisionCrossSection     5.45e-19;    // [m^2]
+    Tref                      273.0;       // [K] Reference temperature
+    sutherlandConstant        111.0;       // [K]
+    relaxationCollisionNumber 5;          // Typical value for N2, air
+}
+
+internalEnergyModel     adiabatic;
+
+internalEnergyCoeffs
+{
+    degreesOfFreedom     3;
+}
+
+rotationalRelaxationModel     LarsenBorgnakke;
+
+rotationalRelaxationCoeffs
+{
+    relaxationCollisionNumber   5;
+}
+
+vibrationModel           none;
+
+translationalTemperatureModel  MaxwellBoltzmann;
+rotationalTemperatureModel     MaxwellBoltzmann;
+WallInteractionModel MaxwellianThermal;
+
+MaxwellianThermalCoeffs
+{
+    accommodationCoeff 1.0;
+}
+InflowBoundaryModel FreeStream;
+
+FreeStreamCoeffs
+{
+    molecularWeight     28.97;
+    temperature         300;
+    velocity            (1000 0 0);
+
+    numberDensities
+    {
+        "0" 1e20;
+    }
+}
+
+nEquivalentParticles     1e10;
+
+typeIdList          ("0");
+
+moleculeProperties
+{
+    "0"
+    {
+        diameter                    4.17e-10;
+        molecularWeight            28.97;
+        mass                       4.65e-26;
+        dof                        3;
+        internalDegreesOfFreedom   0;
+        epsOverK                   97.0;
+        omega                      1.0;
+    }
+}
+
+clouds
+{
+    dsmcCloud1
+    {
+        type                    dsmcCloud;
+
+        diameterModel           constant;
+        diameter                4.17e-10;
+
+        massModel               constant;
+        mass                    4.65e-26;
+
+        collisionModel          LarsenBorgnakkeVariableHardSphere;
+        collisionCrossSection   1e-18;
+
+        freestreamVelocity      (1000 0 0);
+        freestreamTemperature   300;
+
+        cellOccupancy           10;
+        maxTrackTime            10;
+    }
+}

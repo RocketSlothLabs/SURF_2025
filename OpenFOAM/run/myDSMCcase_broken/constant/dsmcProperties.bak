@@ -1,0 +1,36 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      dsmcProperties;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dsmcCloud1
+{
+    type                dsmcCloud;
+
+    diameterModel       constant;
+    diameter            4.17e-10;
+
+    massModel           constant;
+    mass                4.65e-26;
+
+    collisionModel      hardSphere;
+    collisionCrossSection 1e-18;
+
+    freestreamVelocity  (1000 0 0);
+    freestreamTemperature 300;
+
+    cellOccupancy       10;
+    maxTrackTime        10;
+
+    typeIdList          (0);  // <- This must be inside the braces
+}

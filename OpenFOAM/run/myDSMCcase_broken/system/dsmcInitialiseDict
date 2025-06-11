@@ -1,0 +1,52 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      dsmcInitialiseDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+temperature         300;               // [K]
+pressure            101325;            // [Pa]
+velocity            (1000 0 0);        // [m/s]
+internalEnergy      0;                 // optional
+U                   (1000 0 0);        // velocity vector
+
+flowDirection       (1 0 0);           // direction of inflow
+startTime           0;
+
+initialiseToFreestream        yes;
+
+massPerParticle               1e-20;
+
+randomSeed                    42;
+
+// Number densities for each typeId (from 0 to N)
+// Syntax: typeId numberDensity;
+numberDensities
+{
+    "0" 1e20;
+}
+
+// Region(s) where particles are initialized
+regions
+(
+    region0
+    {
+        type box;
+        box
+        {
+            min (0 0 0);
+            max (0.01 0.01 0.001);
+        }
+    }
+);
+
+// ************************************************************************* //

@@ -1,0 +1,62 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      createPatchDict;
+}
+
+pointSync true;
+
+patches
+(
+    {
+        name inlet;
+        patchInfo { type patch; }
+        constructFrom patches;
+        patches (auto2);
+    }
+
+    {
+        name lateralWall;
+        patchInfo { type wall; }
+        constructFrom patches;
+        patches (auto5);
+    }
+
+    {
+        name bottomWall;
+        patchInfo { type wall; }
+        constructFrom patches;
+        patches (auto8);
+    }
+
+    {
+        name symmetry1;
+        patchInfo { type symmetry; } // or symmetryPlane if you're sure it's planar
+        constructFrom patches;
+        patches (auto6);
+    }
+
+    {
+        name symmetry2;
+        patchInfo { type symmetry; }
+        constructFrom patches;
+        patches (auto7);
+    }
+
+    {
+        name outlet1;
+        patchInfo { type patch; }
+        constructFrom patches;
+        patches (auto9);
+    }
+
+    {
+        name outlet2;
+        patchInfo { type patch; }
+        constructFrom patches;
+        patches (auto0 auto1 auto10 auto4 auto3);
+    }
+);

@@ -1,0 +1,51 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      boundaryT;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];  // Temperature in K
+internalField   uniform 0;
+
+boundaryField
+{
+    inlet
+    {
+        type            zeroGradient;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    top
+    {
+        type            fixedValue;
+        value           uniform 300;
+    }
+    bottom
+    {
+        type            fixedValue;
+        value           uniform 300;
+    }
+    front
+    {
+        type            fixedValue;
+        value           uniform 300;
+    }
+    back
+    {
+        type            fixedValue;
+        value           uniform 300;
+    }
+}
+
+// ************************************************************************* //

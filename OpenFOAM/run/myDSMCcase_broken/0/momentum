@@ -1,0 +1,48 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      momentum;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 -1 -1 0 0 0 0];  // kg/(m^2·s)
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    inlet
+    {
+        type            zeroGradient;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    top
+    {
+        type            zeroGradient;
+    }
+    bottom
+    {
+        type            zeroGradient;
+    }
+    front
+    {
+        type            zeroGradient;
+    }
+    back
+    {
+        type            zeroGradient;
+    }
+}
+
+// ************************************************************************* //
+

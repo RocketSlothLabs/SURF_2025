@@ -1,0 +1,55 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : dsmcInitialise -parallel
+Date   : Jun 09 2025
+Time   : 10:19:35
+Host   : EthanolFOAM
+PID    : 834856
+I/O    : uncollated
+Case   : /home/rocketsloth/OpenFOAM/rocketsloth-v2406/run/wedge15Ma5
+nProcs : 4
+Hosts  :
+(
+    (EthanolFOAM 4)
+)
+Pstream initialized with:
+    floatTransfer      : false
+    maxCommsSize       : 0
+    nProcsSimpleSum    : 0
+    nonBlockingExchange: 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Initialising dsmc for Time = 0
+
+
+Constructing constant properties for
+    N2
+    O2
+
+Initialising particles
+
+Total number of molecules added: 20843
+
+
+ExecutionTime = 0.13 s  ClockTime = 0 s
+
+End
+
+Finalising parallel run

@@ -1,0 +1,14 @@
+
+dsmcFoam:83891 terminated with signal 6 at PC=78db41ca50bc SP=7ffca0d229a0.  Backtrace:
+/lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c) [0x78db41ca50bc]
+/lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e) [0x78db41c456de]
+/lib/x86_64-linux-gnu/libc.so.6(abort+0x2c) [0x78db41c288cd]
+/home/rocketsloth/OpenFOAM/OpenFOAM-v2406/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZN4Foam5error10simpleExitEib+0x17d) [0x78db42829bcd]
+/home/rocketsloth/OpenFOAM/OpenFOAM-v2406/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZNK4Foam12dimensionSetaSERKS0_+0xc9) [0x78db42b85159]
+dsmcFoam(_ZN4Foam14GeometricFieldIdNS_12fvPatchFieldENS_7volMeshEEaSERKNS_11dimensionedIdEE+0x3b) [0x5ae7b40bd14b]
+dsmcFoam(+0x3379f) [0x5ae7b40bd79f]
+dsmcFoam(+0x52170) [0x5ae7b40dc170]
+dsmcFoam(+0x199d5) [0x5ae7b40a39d5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x2a338) [0x78db41c2a338]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b) [0x78db41c2a3fb]
+dsmcFoam(+0x1a3d5) [0x5ae7b40a43d5]

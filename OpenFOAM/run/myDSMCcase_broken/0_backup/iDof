@@ -1,0 +1,47 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      iDof;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+internalField   uniform 2;
+
+boundaryField
+{
+    inlet
+    {
+        type            zeroGradient;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    top
+    {
+        type            zeroGradient;
+    }
+    bottom
+    {
+        type            zeroGradient;
+    }
+    front
+    {
+        type            zeroGradient;
+    }
+    back
+    {
+        type            zeroGradient;
+    }
+}
+
+// ************************************************************************* //

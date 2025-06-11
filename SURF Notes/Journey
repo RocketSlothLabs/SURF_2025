@@ -36,5 +36,56 @@ OpenFoam Installation
 	- Tried OpenFOAM-v2312
 	(Installed both to try dsmcFOAM+, dsmcFOAMplus, rarifiedmultiphaseFOAM
 	However ALL are for OPENFOAM.ORG!!!!!!!)
+	- Installed OpenFOAM-v2412
+	(This is my current version of OpenFOAM, does contain dsmcFOAM, will need to be modified for multiphase and particle interactions)
+
+Simulation Progress 
+	-recreation of Fontes 2022
+		-Geometry
+			-Target Setup:​
+				-Domain: quarter-cylinder (10 m tall, 20 m radius)​
+				-Inlet: 3050 m/s velocity, 3000 K temperature​
+				-Wall: 200 K, lunar gravity, no-slip​
+				-Gas species: combustion of N₂O₄ + Aerozine 50​
+				-Start with gas-only flow field (no particles)​
+			- Inital Set Up
+				-Geometry created in Onshape with the above parameters and inlet 1 meter above floor
+				-Exported CAD model from Onshape as STL file with Text format and Fine Resolution
+		-Meshing
+			-Copied OpenFOAM DSMC Tutorial supersonicCorner
+				* Meshing with snappyHexMesh
+					-Modified snappyHexMeshDict to include
+						geometry
+						{
+							fontes1meter.stl
+							{
+								type triSurfaceMesh;
+								name plate;
+							}
+						}
+					-ran blockMesh
+					-ran surfaceFeatureExtract
+					-ran snappyHexMesh -overwrite
+						-this worked but made a single unnamed patch
+						-ran autoPatch 30 -overwrite
+							this ended up splitting the surface into induvidual patches
+							The angle 30 degrees was chosen to distinguish flat walls from angled planes
+							(This could be changed to make a more refined mesh)
+						-Used paraFoam to inspect each patch and determine which needed to be combined to creat boundary surfaces
+							for me it was:
+							- inlet: auto2
+							- bottom wall: auto8
+							- lateral wall: auto5
+							- symmetry planes: auto6, auto7
+							- outlets: auto0, auto1, auto3, auto4, auto10
+						-Used createPatchDict to combine patches
+						-verified with paraFoam for correct patches and names
+				(snappyHexMesh led to un satisfactory meshing where inlet edges were rough and could severly impact simulation results this led to me seeking other options such as Salome)
+				* Meshing with Salome
+
+
+			
+
+​
 	
 
