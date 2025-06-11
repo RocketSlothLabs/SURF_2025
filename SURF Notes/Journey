@@ -1,0 +1,40 @@
+************************************************************************
+ *                  @@%#===*@                     * RocketSlothLABS
+ *                @%=+*+%@%..@@            @@@@@  * "Because science moves at sloth-speed... with rocket force."
+ *               @++@-......#@@@@     @@-...-%#@  *
+ *             @@+%#.#@@@::@@@@@@  @@+...:=#@-@   * Project     : Numerical Analysis for Mitigation of Lunar Regolith Transport Driven by Retro-Propulsive Rocket Landings
+ *             @@*@@@@@%...@@%:@ @%:*%+==*@%.@    * File        : Journey.txt
+ *             @@#@@++-.=*#=-@@@@.::-+@*%@=:@     * Description : Detailed Notes on the progress and major milestones of the project
+ *              @@@@@@@%@@@@@@#.=#-#@@@#@@*@      * Author      : Ethan Bratt
+ *             @%**#+*%@@@@@#.:-=...@@*@+@        * Created on  : 6/10/2025
+ *            @%%*#@@@@+--=+**@%=%@#*@@#+@        * Version     : 1.0
+ *           @#*%@@%-=*+++++**@#@=#@%@*++%        *
+ *          @++=*===++#*@@@@@@*#@@@@@@**+@        * Sloth science. Rocket speed.
+ *       @@+@#*+++++##@@@=====@@@@@@@@*++@        *
+ *      @@@@*@@###%%@@@==+==@@@@@@@@@#*+@@        *
+ *        ++##%@@@@@@#====@@@@@@@@@@@@%@@         *
+ *    *-==##==--%#%@#=%+@@@@@@@%+**%@@            *
+ *    #*#**-::-:--@%@#@@@@@%@+*%@@@@@             *
+ *     #++-:::::::#@@*==+##+*+@@@@@               *
+ *    ##*::::::::=*#@#=.@@@@@@@@@                 *
+ *    #*::::::::-*## @+@@@@@@@                    *
+ *   *::::::-=-=*### @@                           *
+ * #=+*######**#  #                               *
+ ************************************************************************
+
+Linux Dual boot
+	- Dell Inspiron 5515
+		- AMD Ryzen 7 5700U
+		- Radeon Graphics x16
+		- 32 GB RAM
+		- 1 TB SSD
+	- Ubuntu 25.04 OS
+	- Windows 11 OS
+
+OpenFoam Installation
+	- Tried OpenFOAM-2.4.0-MNF-1.01
+	- Tried OpenFOAM-v2312
+	(Installed both to try dsmcFOAM+, dsmcFOAMplus, rarifiedmultiphaseFOAM
+	However ALL are for OPENFOAM.ORG!!!!!!!)
+	
+
