@@ -39,3 +39,5 @@ coverage/
 *.tgz
 *.zip
 *.tar
+*.avi
+*.xml

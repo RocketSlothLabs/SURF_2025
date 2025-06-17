@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<pqevents>
+  <pqevent object="pqClientMainWindow/VCRToolbar/actionVCRPlay" command="activate" arguments="" />
+</pqevents>
