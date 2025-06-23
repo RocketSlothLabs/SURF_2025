@@ -10,18 +10,12 @@ FoamFile
     version     2.0;
     format      ascii;
     arch        "LSB;label=32;scalar=64";
-    class       dictionary;
-    location    "0/uniform/lagrangian/dsmc";
-    object      cloudProperties;
+    class       labelList;
+    location    "constant/polyMesh";
+    object      boundaryProcAddressing;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-geometry        coordinates;
-
-processor0
-{
-    particleCount   630926;
-}
-
+10(0 1 2 3 4 5 6 -1 -1 -1)
 
 // ************************************************************************* //

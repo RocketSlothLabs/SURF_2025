@@ -23,7 +23,15 @@ boundaryField
     outlet
     {
         type            fixedValue;
-        value           uniform (10000 10000 10000);
+        value           uniform (10000 0 10000);
+
+        
+    }
+
+    Outlet2
+    {
+        type            fixedValue;
+        value           uniform (-10000 0 10000);
 
         
     }
@@ -31,7 +39,7 @@ boundaryField
     inlet
     {
         type            fixedValue;
-        value           uniform (0 0 -500);
+        value           uniform (0 0 -3050);
     }
 
     lateralWall
@@ -46,12 +54,12 @@ boundaryField
 
      symmetryX
     {
-        type            symmetry;
+        type            empty;
     }
 
      symmetryY
     {
-        type            symmetry;
+        type            empty;
     }
 }
 

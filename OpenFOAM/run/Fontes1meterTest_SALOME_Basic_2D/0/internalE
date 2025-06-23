@@ -25,6 +25,11 @@ boundaryField
         type            zeroGradient;
     }
 
+    Outlet2
+    {
+        type            zeroGradient;
+    }
+
     inlet
     {
         type            zeroGradient;
@@ -42,12 +47,12 @@ boundaryField
 
     symmetryX
     {
-        type            symmetry;
+        type            empty;
     }
 
     symmetryY
     {
-        type            symmetry;
+        type            empty;
     }
 }
 

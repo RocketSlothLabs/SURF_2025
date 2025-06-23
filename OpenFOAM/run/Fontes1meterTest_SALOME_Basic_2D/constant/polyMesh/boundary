@@ -16,7 +16,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-6
+7
 (
     inlet
     {
@@ -27,32 +27,38 @@ FoamFile
     outlet
     {
         type            patch;
-        nFaces          1166;
+        nFaces          1128;
         startFace       848603;
     }
     lateralWall
     {
         type            patch;
         nFaces          348;
-        startFace       849769;
+        startFace       849731;
     }
     floorWall
     {
-        type            patch;
+        type            wall;
         nFaces          772;
-        startFace       850117;
+        startFace       850079;
     }
     symmetryX
     {
-        type            patch;
+        type            empty;
         nFaces          165550;
-        startFace       850889;
+        startFace       850851;
     }
     symmetryY
     {
-        type            patch;
+        type            empty;
         nFaces          171588;
-        startFace       1016439;
+        startFace       1016401;
+    }
+    Outlet2
+    {
+        type            wall;
+        nFaces          38;
+        startFace       1187989;
     }
 )
 
