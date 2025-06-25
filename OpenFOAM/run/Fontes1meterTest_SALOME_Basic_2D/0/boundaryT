@@ -23,13 +23,12 @@ boundaryField
     outlet
     {
         type            fixedValue;
-        value           uniform 3000;
+        value           uniform 1;
     }
 
     Outlet2
     {
-        type            fixedValue;
-        value           uniform 3000;
+        type            symmetry;
     }
 
     inlet
@@ -41,13 +40,13 @@ boundaryField
     lateralWall
     {
         type            fixedValue;
-        value           uniform 3000;
+        value           uniform 200;
     }
     
     floorWall
     {
         type            fixedValue;
-        value           uniform 3000;
+        value           uniform 200;
     }
 
     symmetryX

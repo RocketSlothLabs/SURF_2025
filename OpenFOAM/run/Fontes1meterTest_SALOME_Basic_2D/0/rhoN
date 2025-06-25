@@ -27,7 +27,7 @@ boundaryField
 
     Outlet2
     {
-        type            zeroGradient;
+        type            symmetry;
     }
 
     inlet

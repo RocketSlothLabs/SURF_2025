@@ -30,7 +30,7 @@ boundaryField
     outlet
     {
         type            fixedValue;
-        value           uniform 3000;
+        value           uniform 1;
     }
     lateralWall
     {
@@ -40,7 +40,7 @@ boundaryField
     floorWall
     {
         type            fixedValue;
-        value           uniform 3000;
+        value           uniform 200;
     }
     symmetryX
     {
@@ -52,8 +52,7 @@ boundaryField
     }
     Outlet2
     {
-        type            fixedValue;
-        value           nonuniform List<scalar> 0();
+        type            symmetry;
     }
     procBoundary0to1
     {

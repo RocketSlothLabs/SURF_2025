@@ -32,7 +32,7 @@ FoamFile
     }
     lateralWall
     {
-        type            patch;
+        type            wall;
         nFaces          348;
         startFace       849731;
     }
@@ -56,7 +56,7 @@ FoamFile
     }
     Outlet2
     {
-        type            wall;
+        type            symmetry;
         nFaces          38;
         startFace       1187989;
     }

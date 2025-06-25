@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v2406                                 |
+|  \\    /   O peration     | Version:  2406                                  |
 |   \\  /    A nd           | Website:  www.openfoam.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -9,51 +9,18 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volScalarField;
-    object      linearKE;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "0/uniform/lagrangian/dsmc";
+    object      cloudProperties;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [1 -1 -2 0 0 0 0];
+geometry        coordinates;
 
-internalField   uniform 0;
-
-boundaryField
+processor0
 {
-    outlet
-    {
-        type            zeroGradient;
-    }
-
-    Outlet2
-    {
-        type            symmetry;
-    }
-
-    inlet
-    {
-        type            zeroGradient;
-    }
-
-    symmetryX
-    {
-        type            empty;
-    }
-
-    symmetryY
-    {
-        type            empty;
-    }
-
-        lateralWall
-    {
-        type            zeroGradient;
-    }
-
-        floorWall
-    {
-        type            zeroGradient;
-    }
+    particleCount   0;
 }
 
 

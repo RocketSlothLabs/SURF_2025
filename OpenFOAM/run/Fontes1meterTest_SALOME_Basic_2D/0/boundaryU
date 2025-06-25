@@ -30,8 +30,7 @@ boundaryField
 
     Outlet2
     {
-        type            fixedValue;
-        value           uniform (-10000 0 10000);
+        type            symmetry;
 
         
     }

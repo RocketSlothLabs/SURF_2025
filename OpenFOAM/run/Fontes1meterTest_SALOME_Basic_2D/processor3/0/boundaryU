@@ -50,8 +50,7 @@ boundaryField
     }
     Outlet2
     {
-        type            fixedValue;
-        value           nonuniform List<vector> 0();
+        type            symmetry;
     }
     procBoundary3to0
     {
