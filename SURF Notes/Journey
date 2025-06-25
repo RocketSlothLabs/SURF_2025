@@ -40,7 +40,7 @@ OpenFoam Installation
 	(This is my current version of OpenFOAM, does contain dsmcFOAM, will need to be modified for multiphase and particle interactions)
 
 Simulation Progress 
-	-recreation of Fontes 2022
+	-recreation of Fontes 2022 3D CASE
 		-Geometry
 			-Target Setup:​
 				-Domain: quarter-cylinder (10 m tall, 20 m radius)​
@@ -80,8 +80,36 @@ Simulation Progress
 							- outlets: auto0, auto1, auto3, auto4, auto10
 						-Used createPatchDict to combine patches
 						-verified with paraFoam for correct patches and names
-				(snappyHexMesh led to un satisfactory meshing where inlet edges were rough and could severly impact simulation results this led to me seeking other options such as Salome)
+				(snappyHexMesh led to un satisfactory meshing where inlet edges were rough and could severly impact simulation 
+				results this led to me seeking other options such as Salome)
 				* Meshing with Salome
+					- exported OnShape CAD models as a STEP file
+					- Imported STEP file into Salome and opened into SMESH module
+	-Simplification of Fontes 2022 as 2D CASE
+		-Geometry
+			-Target Setup:
+				-Domain: quarter-cylinder (10 m tall, 20 m radius)​
+				-Inlet: 3050 m/s velocity, 3000 K temperature​
+				-Wall: 200 K, lunar gravity, no-slip​
+				-Gas species: combustion of N₂O₄ + Aerozine 50​
+				-Start with gas-only flow field (no particles)​
+			- Inital Set Up
+				-Geometry created in Onshape with the above parameters and inlet 1 meter above floor
+				-For 2D model, the XZ plane was extracted from the 3D model and extruded to a width of 1mm
+				-Exported CAD model from Onshape as STEP file
+		-Meshing
+			-Meshed in salome with NETGEN 1D-2D-3D with cell edge length of 0.05175 m 
+			-Exported as UNV file
+			-Used Ideasunv2FOAM command to create polymesh
+		-Simulation Set Up
+			-Boundary Conditions
+				-Inlet > patch
+				-Outlet > patch
+					* note: Temp. file cannot be set at zeroGradient type to fix set as fixedValue 1K
+				-Outlet2 > symmetry
+				-lateralWall > wall
+				-floorWall > wall
+
 
 
 			
