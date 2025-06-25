@@ -18,7 +18,7 @@ FoamFile
 // General Properties
 // ~~~~~~~~~~~~~~~~~~
 
-nEquivalentParticles            1e13;
+nEquivalentParticles            1e14;
 
 
 // Wall Interaction Model
