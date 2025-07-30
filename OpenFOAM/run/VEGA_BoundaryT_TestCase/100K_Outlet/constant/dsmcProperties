@@ -1,0 +1,110 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2406                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      dsmcProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+// General Properties
+// ~~~~~~~~~~~~~~~~~~
+
+nEquivalentParticles            5e14;
+
+
+// Wall Interaction Model
+// ~~~~~~~~~~~~~~~~~~~~~~
+
+WallInteractionModel            MaxwellianThermal;
+
+
+// Binary Collision Model
+// ~~~~~~~~~~~~~~~~~~~~~~
+
+BinaryCollisionModel            LarsenBorgnakkeVariableHardSphere;
+
+LarsenBorgnakkeVariableHardSphereCoeffs
+{
+    Tref                        3000;
+    relaxationCollisionNumber   5.0;
+}
+
+
+// Inflow Boundary Model
+// ~~~~~~~~~~~~~~~~~~~~~
+
+InflowBoundaryModel             FreeStream;
+
+FreeStreamCoeffs
+{
+    numberDensities
+    {
+        N2      0.7793e22;
+        H2      0.3866e22;
+        CO      0.2418e22;
+        CO2     0.0806e22;
+        H2O     0.8617e22;
+    };
+}
+
+
+// Molecular species
+// ~~~~~~~~~~~~~~~~~
+
+typeIdList                      (N2 H2 CO CO2 H2O);
+
+moleculeProperties
+{
+    N2
+    {
+        mass                            46.5e-27;
+        diameter                        4.17e-10;
+        internalDegreesOfFreedom        2;
+        omega                           0.74;
+    }
+    
+    H2
+    {
+        mass                            3.3475e-27;
+        diameter                        2.05e-10;
+        internalDegreesOfFreedom        2;
+        omega                           0.67;
+    }
+    
+    CO
+    {
+        mass                            46.512e-27;
+        diameter                        3.10e-10;
+        internalDegreesOfFreedom        2;
+        omega                           0.78;
+    }
+
+
+    CO2
+    {
+        mass                            73.071e-27;
+        diameter                        3.90e-10;
+        internalDegreesOfFreedom        2;
+        omega                           0.92;
+    }
+    
+    H2O
+    {
+        mass                            29.915e-27;
+        diameter                        2.50e-10;
+        internalDegreesOfFreedom        3;
+        omega                           0.92;
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,22 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      dsmcFields;
+}
+
+fields
+(
+    T
+    p
+    nTotal
+    U
+    q
+    epsilonTrans
+    epsilonRot
+    epsilonVib
+    iDof
+);
+
